@@ -12,8 +12,8 @@ contador = 0
 contenido = []
 
 #Folder Path
-path = r"C:\Users\OSP2021\Documents\Pruebas\Pruebas_epud"
-autorPath = r"C:\Users\OSP2021\Documents\Pruebas\Pruebas_epud\Organizacion"
+path = r"C:\Users\OSP2021\Documents\Organizador_Archivos\Pruebas_epud"
+autorPath = r"C:\Users\OSP2021\Documents\Organizador_Archivos\Pruebas_epud\Organizacion"
 
 #Change the directory
 os.chdir(path)
