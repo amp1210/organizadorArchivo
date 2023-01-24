@@ -20,10 +20,12 @@ os.chdir(path)
 
 #Realiza el conteo de cuantos archivos del tipo a exportar se encuentran en la carpeta.
 for file in os.listdir():
-    if os.path.isfile(os.path.join(path, file)) and file.endswith(".epub"):
+    if os.path.isfile(os.path.join(path, file)):
         initial_count += 1
     #endif
 #endfor
+
+print(f'{initial_count}')
 
 #Archivo EPUB File
 def archivo_EPUB_file(file_path, file, autorPath):
@@ -54,7 +56,7 @@ def archivo_EPUB_file(file_path, file, autorPath):
     
     global exito
     
-    if(os.path.isfile(f'{target}')):
+    """if(os.path.isfile(f'{target}')):
         print("el archivo existe, no se hace nada...")
         exito = False
         return(exito)
@@ -62,7 +64,7 @@ def archivo_EPUB_file(file_path, file, autorPath):
         #print(completados)
         shutil.copy2(file, target)
         exito = True
-        return(exito)
+        return(exito)"""
     #shutil.copy2(file, target)
     #shutil.move(file, ruta)
 
@@ -75,10 +77,10 @@ for file in os.listdir():
         file_path = f"{path}\{file}"
         #call read text file funtion
         archivo_EPUB_file(file_path, file, autorPath)
-        if(exito==True):
+        """if(exito==True):
             completados += 1
         else:
-            archivosExistentes += 1
+            archivosExistentes += 1"""
         #time.sleep(2)
     #endif
 #endfor
